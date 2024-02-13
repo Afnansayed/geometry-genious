@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Geometry</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!--Main container-->
+        <div class="flex flex-col md:flex-row">
+            <!--Shape Card container-->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!--Triangle Card-->
+                <div class="card card-compact bg-base-100 shadow-xl">
+                    <figure><img src="images/triangle.png" alt="Shoes"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Triangle</h2>
+                        <p class="text-center text-2xl">Area (A) = 0.5 X b X h</p>
+                        <div class="flex flex-col md:flow-root gap-5 mb-5">
+                            <input id="input-base" type="text" placeholder="b" class="w-24 text-2xl">
+                            <span>cm</span>
+                            <input id="input-height" type="text" placeholder="h" class="w-24 text-2xl">
+                            <span>cm</span>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button onclick="triangle()" class="btn btn-primary w-full">Result</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Rectangle Card-->
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png"
+                            alt="Shoes"  class="p-10"></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = W X H</p>
+                        <div class="flex flex-col md:flex-row w-[100%] lg:w-[50%]">
+                            <input id="input-width" type="text" class="text-2xl mr-5 w-24" placeholder="Width"><span>cm</span>
+                            <input id="input-heigh" type="text" class="text-2xl ml-5 w-24" placeholder="height"><span>cm</span>
+                        </div>
+                        <p class="text-2xl">Area = <span id="putting"></span> cm <sup>2</sup></p>
+                        <div class="card-actions justify-end">
+                            <button onclick="rectangle()" class="btn btn-primary w-[100%]">Result</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Parallelogram Card-->
+                <div class="card card-compact  bg-base-100 shadow-xl">
+                    <figure><img src="images/parallelogram.png"
+                            alt="Shoes"  class="p-10"></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = B X H</p>
+                        <div class="flex flex-col md:flex-row w-[100%] lg:w-[50%]">
+                            <input id="input-pa-base" type="text" class="text-2xl mr-5 w-24" placeholder="Width"><span>cm</span>
+                            <input id="input-pa-heigh" type="text" class="text-2xl ml-5 w-24" placeholder="height"><span>cm</span>
+                        </div>
+                        <p class="text-2xl">Area = <span id="for-paralalogram"></span> cm <sup>2</sup></p>
+                        <div class="card-actions justify-end">
+                            <button onclick="parallelogram()" class="btn btn-primary w-[100%]">Result</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--area calculation Container-->
+            <div id="output" class="w-96">
+                <h3 class="text-3xl">Area calculation</h3>
+            </div>
+        </div>
+        <p id="name">Programming Hero</p>
+    </main>
+    <script src="js/triangle.js"></script>
+    <script src="js/rectangle.js"></script>
+    <script src="reuse.js"></script>
+</body>
+
+</html>
